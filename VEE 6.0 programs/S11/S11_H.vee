@@ -1,0 +1,4318 @@
+(saveFormat "2.3")
+(date "Wed 17/Jun/2015 19:02:58 ")
+(veerev "6.01")
+(platform "PC")
+(execMode v6)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "analyzer"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 7)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 120)
+(byteOrder 0)
+(idFileName "hp8752_3.cid")
+(idn "he8753e")
+(ppFile "HP875X")
+(ppAddr "GPIB0::7::INSTR")
+(eoiEnabled 1)
+(model "hp8753e"
+(standard 488)))
+(iodevice "generator"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 10)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 120)
+(byteOrder 0)
+(idFileName "hp33120a.cid")
+(idn "hp33120a")
+(ppFile "HP33120A")
+(ppAddr "GPIB0::10::INSTR")
+(eoiEnabled 1)
+(model "hp33120a"
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(automationRefs
+(automationRef 1
+(libid "{00020813-0000-0000-C000-000000000046}")
+(desc "Microsoft Excel 8.0 Object Library")
+(filename "C:\\Program Files\\Microsoft Office\\Office\\EXCEL8.OLB")
+(verMajor 1)
+(verMinor 2)
+(lcid 0)))
+(activexControls
+(activexControl 1
+(libid "{CA8A9783-280D-11CF-A24D-444553540000}")
+(desc "Acrobat Control for ActiveX")
+(filename "E:\\Program Files\\Adobe\\Acrobat 5.0\\Reader\\ActiveX\\pdf.ocx")
+(verMajor 1)
+(verMinor 3)
+(lcid 0))
+(activexControl 2
+(libid "{CC2CD0DE-7135-11D4-98C5-080009C12B46}")
+(desc "Agilent Instrument Discovery Control")
+(filename
+"E:\\Program Files\\Common Files\\Agilent\\IOLibraries\\AgtDiscovery.ocx")
+(verMajor 5)
+(verMinor 0)
+(lcid 0))
+(activexControl 3
+(libid "{3CF73555-6421-4225-AB3B-AB348A1742DB}")
+(desc "Agilent Instrument Repeated Measurement Control")
+(filename
+"E:\\Program Files\\Common Files\\Agilent\\IntuiLink\\AgtRepeatedMeasure.ocx")
+(verMajor 4)
+(verMinor 0)
+(lcid 0))
+(activexControl 4
+(libid "{544420C9-0A5A-4694-8B50-C97D529A8537}")
+(desc "Agilent Instrument Setup Manager Control")
+(filename
+"E:\\Program Files\\Common Files\\Agilent\\IntuiLink\\AgtInstrSetups.ocx")
+(verMajor 3)
+(verMinor 0)
+(lcid 0))
+(activexControl 5
+(libid "{05589fa0-c356-11ce-bf01-00aa0055595a}")
+(desc "Microsoft ActiveMovie Control")
+(filename "E:\\WINNT\\System32\\amcompat.tlb")
+(verMajor 2)
+(verMinor 0)
+(lcid 0))
+(activexControl 6
+(libid "{06DD38D0-D187-11CF-A80D-00C04FD74AD8}")
+(desc "Microsoft ActiveX Plugin")
+(filename "E:\\WINNT\\System32\\plugin.ocx")
+(verMajor 1)
+(verMinor 0)
+(lcid 0))
+(activexControl 7
+(libid "{8E27C92E-1264-101C-8A2F-040224009C02}")
+(desc "Microsoft Calendar Control 8.0")
+(filename "E:\\WINNT\\system32\\mscal.ocx")
+(verMajor 7)
+(verMinor 0)
+(lcid 0))
+(activexControl 8
+(libid "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}")
+(desc "Microsoft Windows Common Controls 6.0 (SP4)")
+(filename "E:\\WINNT\\system32\\MSCOMCTL.OCX")
+(verMajor 2)
+(verMinor 0)
+(lcid 0))
+(activexControl 9
+(libid "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}")
+(desc "Microsoft Windows Common Controls-2 6.0 (SP3)")
+(filename "E:\\WINNT\\system32\\MSCOMCT2.OCX")
+(verMajor 2)
+(verMinor 0)
+(lcid 0)))
+(properties
+(trigMode deg)
+(nextID 309)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(UserFunctions
+(nextID 1)
+(context 0
+(properties
+(name "globals")
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 0 DECLVAR
+(properties
+(name "Declare sheet")
+(scope glob)
+(globalName "sheet"))
+(implementation
+(value Object
+(data  "ANY "))))
+(device 1 DECLVAR
+(properties
+(name "Declare window")
+(scope glob)
+(globalName "window"))
+(implementation
+(value Object
+(data  "ANY "))))
+(device 2 DECLVAR
+(properties
+(name "Declare range")
+(scope glob)
+(globalName "range"))
+(implementation
+(value Object
+(data  "ANY "))))
+(device 3 DECLVAR
+(properties
+(name "Declare app")
+(scope glob)
+(globalName "app"))
+(implementation
+(value Object
+(data  "ANY "))))
+(configuration))
+(contextCarrier
+(active detail)
+(detail
+(extent 508 348)
+(anchorPt -13 27)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 84 15))
+(open
+(extent 344 121))
+(pinCenter 190 160))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 96 15))
+(open
+(extent 344 121))
+(pinCenter 190 100))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 344 121))
+(pinCenter 320 100))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 73 15))
+(open
+(extent 344 121))
+(pinCenter 320 160)))
+(stackingOrder 1 0 3 2)))))
+(device 67 CONSTANT
+(properties
+(name "Stop frequency kHz (K), MHz (M), GHz (G)"))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  3000000000))
+(initValue Real
+(data  100000000))))
+(device 68 CONSTANT
+(properties
+(name "Start frequency kHz (K), MHz (M), GHz (G)"))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  1000000))
+(initValue Real
+(data  1000000))))
+(device 165 CONSTANT
+(properties
+(name "REGISTER 1-30"))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  1))
+(initValue Int32
+(data  0))))
+(device 198 NOTE
+(properties
+(name "Notes")
+(text2 7
+"1) This program measures S11-parameter as a function of the DC magnetic field. "
+"2) The RF cell must be connected to the Analyser\'s port 1."
+"3) The frequency sweep contains 11 points."
+"4) The Excel files will be saved in the folder My Documents\\S-parameters and Impedance Data\\S11\\S11_H."
+"" "Revised: 17/06/2015 D.Makhnovskiy" "")))
+(device 272 CONSTANT
+(properties
+(name "Generator Voltage: 0-10 V"))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  10))
+(initValue Real
+(data  8))))
+(device 277 CONSTANT
+(properties
+(name "Field coefficient: V to Oe"))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  10))
+(initValue Real
+(data  1))))
+(device 279 CONSTANT
+(properties
+(name "Number of field points"))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  20))
+(initValue Int32
+(data  100))))
+(device 282 START25)
+(device 292 CONTEXT
+(properties
+(name "Program: DO NOT CHANGE!")
+(trigMode deg)
+(nextID 15)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "REG")
+(requires
+(datatype Int16)
+(shape "Scalar"))
+(optional yes))
+(input 2
+(name "Generator")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 3
+(name "Field coefficient")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 4
+(name "Number of points")
+(requires
+(datatype Int16)
+(shape "Scalar"))
+(optional yes))
+(input 5
+(name "Start Freq")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 6
+(name "Stop Freq")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 7
+(name "Excel Directory")
+(optional yes)))
+(deviceList
+(device 1 FORMULA
+(properties
+(expr 1 "-A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 5 CONTEXT
+(properties
+(name "DATA Files")
+(trigMode deg)
+(nextID 102)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Field UP")
+(optional yes))
+(input 2
+(name "Real UP")
+(optional yes))
+(input 3
+(name "Imag UP")
+(optional yes))
+(input 4
+(name "Real DN")
+(optional yes))
+(input 5
+(name "Imag DN")
+(optional yes))
+(input 6
+(name "Field DN")
+(optional yes))
+(input 7
+(name "points")
+(optional yes))
+(input 8
+(name "Directory")
+(optional yes))
+(input 9
+(name "StartFreq")
+(optional yes))
+(input 10
+(name "StopFreq")
+(optional yes)))
+(deviceList
+(device 8 FROMARRAY
+(properties
+(name "Real UP")
+(expr 1 "Ary[*, A]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(input 2
+(name "A")
+(optional yes))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 13 FROMARRAY
+(properties
+(name "Imaginary UP")
+(expr 1 "Ary[*, A]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(input 2
+(name "A")
+(optional yes))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 84 FORMULA
+(properties
+(name "points+1")
+(expr 1 "points+1"))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 88 CONTEXT
+(properties
+(name "Excel")
+(trigMode deg)
+(nextID 30)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Field UP")
+(optional yes))
+(input 3
+(name "Real UP")
+(optional yes))
+(input 4
+(name "Imaginary UP")
+(optional yes))
+(input 5
+(name "Field DN")
+(optional yes))
+(input 6
+(name "Real DN")
+(optional yes))
+(input 7
+(name "Imaginary DN")
+(optional yes))
+(input 8
+(name "Filename")
+(optional yes))
+(input 9
+(name "Directory")
+(optional yes))
+(input 10
+(name "Frequency")
+(optional yes)))
+(deviceList
+(device 0 CALL
+(properties
+(name "Call globals")
+(callFunc "globals")
+(parmMode rev30)))
+(device 1 FORMULA
+(properties
+(name "Set up Excel Worksheet")
+(expr 5 "set sheet = CreateObject(\"Excel.Sheet\").worksheets(1);"
+"set app = sheet.application;" "set window = app.windows(1);"
+"window.caption = \"Impedance Z\";" "")))
+(device 2 FORRANGE
+(properties
+(from 1)
+(thru 21)
+(step 1))
+(interface
+(input 1
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 3 FORMULA
+(properties
+(name "Fill in Cells: Field UP")
+(expr 7 "sheet.cells (points+1, 1) = Field [points-1]" "" "" "" "" "" ""))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Field")
+(optional yes))))
+(device 5 FORMULA
+(properties
+(name "Fill in Cells: Real UP")
+(expr 7 "sheet.cells (points+1, 2) = Real [points-1]" "" "" "" "" "" ""))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Real")
+(optional yes))))
+(device 6 FORMULA
+(properties
+(name "Fill in Cells: Imaginary UP")
+(expr 7 "sheet.cells (points+1, 3) = Imag [points-1]" "" "" "" "" "" ""))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Imag")
+(optional yes))))
+(device 11 FORMULA
+(properties
+(name "Fill in Cells: Field DN")
+(expr 7 "sheet.cells (points+1, 4) = Field [points-1]" "" "" "" "" "" ""))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Field")
+(optional yes))))
+(device 12 FORMULA
+(properties
+(name "Fill in Cells: Real DN")
+(expr 7 "sheet.cells (points+1, 5) = Real [points-1]" "" "" "" "" "" ""))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Real")
+(optional yes))))
+(device 13 FORMULA
+(properties
+(name "Fill in Cells: Imaginary DN")
+(expr 10 "sheet.cells (points+1, 6) = Imag [points-1]" "" "" "" "" "" "" "" ""
+""))
+(interface
+(input 1
+(name "points")
+(optional yes))
+(input 2
+(name "Imag")
+(optional yes))))
+(device 14 FILESELECT
+(properties
+(name "File Name Selection")
+(prompt "Enter File Name:")
+(initialDirectory
+"E:\\Documents and Settings\\Administrator\\My Documents\\S-parameters and Impedance Data\\S11\\S11_H"
+)
+(initialFile "S11_11.xls")
+(dialogMode Writing))
+(interface
+(input 1
+(name "Initial File")
+(tag "Initial File")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Initial Directory")
+(tag "Initial Directory")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 17 FORMULA
+(properties
+(name "Save As")
+(expr 1 "sheet.SaveAs(filename)"))
+(interface
+(input 1
+(name "filename")
+(optional yes))))
+(device 18 JUNCTION
+(properties
+(name "JCT"))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 19 FORMULA
+(properties
+(name "Close Excel")
+(expr 1 "App.Quit()")))
+(device 22 FORMULA
+(properties
+(name "Fill in Cells: frequency")
+(expr 7 "sheet.cells (1, 7) = \"frequency (Hz)\"" "" "" "" "" "" "")))
+(device 23 FORMULA
+(properties
+(name "Fill in Cells: frequency")
+(expr 6 "sheet.cells (2, 7) = freq" "" "" "" "" ""))
+(interface
+(input 1
+(name "freq")
+(optional yes))))
+(device 24 FORMULA
+(properties
+(name "Fill in Cells: Field UP")
+(expr 4 "sheet.cells (1, 1) = \"Field (Oe) UP\"" "" "" "")))
+(device 25 FORMULA
+(properties
+(name "Fill in Cells: Real UP")
+(expr 2 "sheet.cells (1, 2) = \"Re (S11); UP\"" "")))
+(device 26 FORMULA
+(properties
+(name "Fill in Cells: Imaginary UP")
+(expr 7 "sheet.cells (1, 3) = \"Im (S11); UP\"" "" "" "" "" "" "")))
+(device 27 FORMULA
+(properties
+(name "Fill in Cells: Field DN")
+(expr 3 "sheet.cells (1, 4) = \"Field (Oe) DN\"" "" "")))
+(device 28 FORMULA
+(properties
+(name "Fill in Cells: Real DN")
+(expr 4 "sheet.cells (1, 5) = \"Re (S11); DN\"" "" "" "")))
+(device 29 FORMULA
+(properties
+(name "Fill in Cells: Imaginary DN")
+(expr 7 "sheet.cells (1, 6) = \"Im (S11); DN\"" "" "" "" "" "" "")))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:0 D2:0)
+(connect I1:1 D2:1)
+(connect D2:1 D3:1)
+(connect I2:1 D3:2)
+(connect D2:1 D4:1)
+(connect I3:1 D4:2)
+(connect D2:1 D5:1)
+(connect I4:1 D5:2)
+(connect D2:1 D6:1)
+(connect I5:1 D6:2)
+(connect D2:1 D7:1)
+(connect I6:1 D7:2)
+(connect D2:1 D8:1)
+(connect I7:1 D8:2)
+(connect D14:0 D9:0)
+(connect I8:1 D9:1)
+(connect I9:1 D9:2)
+(connect D9:1 D10:1)
+(connect D10:0 D11:1)
+(connect D9:2 D11:2)
+(connect D11:1 D12:0)
+(connect D2:0 D13:0)
+(connect D13:0 D14:0)
+(connect I10:1 D14:1)
+(connect D3:0 D15:0)
+(connect D4:0 D16:0)
+(connect D5:0 D17:0)
+(connect D6:0 D18:0)
+(connect D7:0 D19:0)
+(connect D8:0 D20:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 237 164)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 72 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 200 -40))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 141 15))
+(open
+(extent 435 177))
+(terminals on)
+(pinCenter 200 -10))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 65 14))
+(open
+(extent 99 79))
+(pinCenter 30 170))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 125 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 200 30))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 124 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 200 90))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 155 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 200 150))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 126 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 200 210))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 125 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 200 270))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 156 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 200 330))
+(devCarrierFor 14
+(active icon)
+(icon
+(extent 122 25))
+(open
+(extent 361 106))
+(terminals on)
+(pinCenter 200 380))
+(devCarrierFor 17
+(active icon)
+(icon
+(extent 48 15))
+(open
+(extent 165 77))
+(terminals on)
+(pinCenter 370 340))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 26 25))
+(open
+(extent 12 50))
+(terminals on)
+(pinCenter 370 380))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 71 15))
+(open
+(extent 115 47))
+(terminals on)
+(pinCenter 460 370))
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 132 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 30 220))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 132 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 30 290))
+(devCarrierFor 24
+(active icon)
+(icon
+(extent 125 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 370 -20))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 124 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 370 40))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 155 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 370 100))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 126 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 370 160))
+(devCarrierFor 28
+(active icon)
+(icon
+(extent 125 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 370 220))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 156 45))
+(open
+(extent 265 87))
+(terminals on)
+(pinCenter 370 280))
+(connect D0:0 D1:0
+(points 2 200 -30 200 -20))
+(connect D1:0 D2:0
+(points 4 200 0 200 10 30 10 30 160))
+(connect I1:1 D2:1
+(points 4 -237 -155 -110 -155 -110 170 -5 170))
+(connect D2:1 D3:1
+(points 6 65 170 90 170 90 140 110 140 110 20 135 20))
+(connect I2:1 D3:2
+(points 4 -237 -125 1 -125 1 40 135 40))
+(connect D2:1 D4:1
+(points 6 65 170 90 170 90 140 110 140 110 80 135 80))
+(connect I3:1 D4:2
+(points 4 -237 -95 -120 -95 -120 100 135 100))
+(connect D2:1 D5:1
+(points 4 65 170 90 170 90 140 120 140))
+(connect I4:1 D5:2
+(points 4 -237 -65 100 -65 100 160 120 160))
+(connect D2:1 D6:1
+(points 6 65 170 90 170 90 180 110 180 110 200 134 200))
+(connect I5:1 D6:2
+(points 6 -237 -35 -220 -35 -220 190 120 190 120 220 134 220))
+(connect D2:1 D7:1
+(points 8 65 170 90 170 90 180 110 180 110 250 130 250 130 260 135 260))
+(connect I6:1 D7:2
+(points 6 -237 -5 -100 -5 -100 260 120 260 120 280 135 280))
+(connect D2:1 D8:1
+(points 6 65 170 90 170 90 180 110 180 110 320 119 320))
+(connect I7:1 D8:2
+(points 4 -237 25 -110 25 -110 340 119 340))
+(connect D14:0 D9:0
+(points 4 30 315 30 350 200 350 200 365))
+(connect I8:1 D9:1
+(points 4 -237 55 120 55 120 370 136 370))
+(connect I9:1 D9:2
+(points 4 -237 85 -220 85 -220 390 136 390))
+(connect D9:1 D10:1
+(points 4 263 370 300 370 300 340 343 340))
+(connect D10:0 D11:1
+(points 5 370 350 370 360 340 360 340 370 354 370))
+(connect D9:2 D11:2
+(points 2 263 390 354 390))
+(connect D11:1 D12:0
+(points 5 385 380 410 380 410 340 460 340 460 360))
+(connect D2:0 D13:0
+(points 2 30 179 30 195))
+(connect D13:0 D14:0
+(points 2 30 245 30 265))
+(connect I10:1 D14:1
+(points 4 -237 115 -90 115 -90 290 -39 290))
+(connect D3:0 D15:0
+(points 8 200 55 200 70 280 70 280 30 290 30 290 -60 370 -60 370 -45))
+(connect D4:0 D16:0
+(points 12 200 115 200 130 210 130 210 110 270 110 270 80 290 80 290 40 300 40
+300 10 370 10 370 15))
+(connect D5:0 D17:0
+(points 10 200 175 200 190 290 190 290 140 280 140 280 90 360 90 360 70 370 70
+370 75))
+(connect D6:0 D18:0
+(points 10 200 235 200 250 280 250 280 200 300 200 300 180 360 180 360 130 370
+130 370 135))
+(connect D7:0 D19:0
+(points 12 200 295 200 310 210 310 210 290 280 290 280 260 290 260 290 210 360
+210 360 190 370 190 370 195))
+(connect D8:0 D20:0
+(points 10 200 355 200 370 210 370 210 420 320 420 320 320 360 320 360 250 370
+250 370 255)))
+(stackingOrder 1 2 8 5 4 3 7 10 11 12 0 13 14 6 9 15 16 17 18 19 20))))
+(device 89 FORRANGE
+(properties
+(from 0)
+(thru 10)
+(step 1))
+(interface
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 90 FROMARRAY
+(properties
+(name "Real DN")
+(expr 1 "Ary[*, A]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(input 2
+(name "A")
+(optional yes))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 91 FROMARRAY
+(properties
+(name "Imaginary DN")
+(expr 1 "Ary[*, A]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(input 2
+(name "A")
+(optional yes))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 98 CONTEXT
+(properties
+(name "FileNames")
+(trigMode deg)
+(nextID 12)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "FileNames")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 VECTORCONCATENATOR
+(properties
+(name "FileNames"))
+(interface
+(input 1
+(name "Z1"))
+(input 2
+(name "Z2")
+(optional yes))
+(input 3
+(name "Z3")
+(optional yes))
+(input 4
+(name "Z4")
+(optional yes))
+(input 5
+(name "Z5")
+(optional yes))
+(input 6
+(name "Z6")
+(optional yes))
+(input 7
+(name "Z7")
+(optional yes))
+(input 8
+(name "Z8")
+(optional yes))
+(input 9
+(name "Z9")
+(optional yes))
+(input 10
+(name "Z10")
+(optional yes))
+(input 11
+(name "Z11")
+(optional yes))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 1 LITERALCONSTANT
+(properties
+(name "Z1"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_1.xls"))
+(initValue Text
+(data  ""))))
+(device 2 LITERALCONSTANT
+(properties
+(name "Z2"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_2.xls"))
+(initValue Text
+(data  ""))))
+(device 3 LITERALCONSTANT
+(properties
+(name "Z3"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_3.xls"))
+(initValue Text
+(data  ""))))
+(device 4 LITERALCONSTANT
+(properties
+(name "Z4"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_4.xls"))
+(initValue Text
+(data  ""))))
+(device 5 LITERALCONSTANT
+(properties
+(name "Z5"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_5.xls"))
+(initValue Text
+(data  ""))))
+(device 6 LITERALCONSTANT
+(properties
+(name "Z6"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_6.xls"))
+(initValue Text
+(data  ""))))
+(device 7 LITERALCONSTANT
+(properties
+(name "Z7"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_7.xls"))
+(initValue Text
+(data  ""))))
+(device 8 LITERALCONSTANT
+(properties
+(name "Z8"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_8.xls"))
+(initValue Text
+(data  ""))))
+(device 9 LITERALCONSTANT
+(properties
+(name "Z9"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_9.xls"))
+(initValue Text
+(data  ""))))
+(device 10 LITERALCONSTANT
+(properties
+(name "Z10"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_10.xls"))
+(initValue Text
+(data  ""))))
+(device 11 LITERALCONSTANT
+(properties
+(name "Z11"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "S11_11.xls"))
+(initValue Text
+(data  ""))))
+(configuration
+(connect D1:1 D0:1)
+(connect D2:1 D0:2)
+(connect D3:1 D0:3)
+(connect D4:1 D0:4)
+(connect D5:1 D0:5)
+(connect D6:1 D0:6)
+(connect D7:1 D0:7)
+(connect D8:1 D0:8)
+(connect D9:1 D0:9)
+(connect D10:1 D0:10)
+(connect D11:1 D0:11)
+(connect D0:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 117 22)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 67 114))
+(open
+(extent 47 222))
+(terminals on)
+(pinCenter 500 210))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 50))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 80))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 110))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 140))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 170))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 200))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 230))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 260))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 85 29))
+(pinCenter 230 290))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 85 29))
+(pinCenter 230 320))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 85 29))
+(pinCenter 230 350))
+(connect D1:1 D0:1
+(points 4 244 50 310 50 310 160 464 160))
+(connect D2:1 D0:2
+(points 4 244 80 300 80 300 170 464 170))
+(connect D3:1 D0:3
+(points 4 244 110 290 110 290 180 464 180))
+(connect D4:1 D0:4
+(points 4 244 140 280 140 280 190 464 190))
+(connect D5:1 D0:5
+(points 4 244 170 270 170 270 200 464 200))
+(connect D6:1 D0:6
+(points 4 244 200 260 200 260 210 464 210))
+(connect D7:1 D0:7
+(points 4 244 230 260 230 260 220 464 220))
+(connect D8:1 D0:8
+(points 4 244 260 270 260 270 230 464 230))
+(connect D9:1 D0:9
+(points 4 244 290 250 290 250 240 464 240))
+(connect D10:1 D0:10
+(points 4 245 320 260 320 260 250 464 250))
+(connect D11:1 D0:11
+(points 4 245 350 270 350 270 260 464 260))
+(connect D0:1 O1:1
+(points 4 536 210 560 210 560 127 232 127)))
+(stackingOrder 1 2 3 4 5 6 7 8 9 10 11 0))))
+(device 99 FROMARRAY
+(properties
+(name "Name")
+(expr 1 "Ary[A]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(input 2
+(name "A")
+(optional yes))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 100 CONTEXT
+(properties
+(name "Frequency list")
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "StartFreq")
+(optional yes))
+(input 2
+(name "StopFreq")
+(optional yes))
+(output 1
+(type data)
+(name "FreqList")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "Step Frequency")
+(expr 1 "(F2-F1)/10"))
+(interface
+(input 1
+(name "F1")
+(optional yes))
+(input 2
+(name "F2")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 1 FORRANGE
+(properties
+(name "Frequency list")
+(from 1000000)
+(thru 3000000000)
+(step 299900000))
+(interface
+(input 1
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Step")
+(tag "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 3 COLLECTOR
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(configuration
+(connect I1:1 D0:1)
+(connect I2:1 D0:2)
+(connect I1:1 D1:1)
+(connect I2:1 D1:2)
+(connect D0:1 D1:3)
+(connect D1:1 D2:1)
+(connect D1:0 D2:2)
+(connect D2:1 O1:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 61 -78)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 93 34))
+(open
+(extent 71 62))
+(terminals on)
+(pinCenter 50 300))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 83 34))
+(open
+(extent 119 79))
+(pinCenter 180 300))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 53 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 290 310))
+(connect I1:1 D0:1
+(points 4 -61 147 -30 147 -30 290 1 290))
+(connect I2:1 D0:2
+(points 6 -61 307 -40 307 -40 360 -30 360 -30 310 1 310))
+(connect I1:1 D1:1
+(points 6 -61 147 -30 147 -30 260 120 260 120 290 136 290))
+(connect I2:1 D1:2
+(points 10 -61 307 -40 307 -40 360 -30 360 -30 340 120 340 120 320 130 320 130
+300 136 300))
+(connect D0:1 D1:3
+(points 4 99 300 120 300 120 310 136 310))
+(connect D1:1 D2:1
+(points 2 224 300 261 300))
+(connect D1:0 D2:2
+(points 5 180 319 180 340 240 340 240 320 261 320))
+(connect D2:1 O1:1
+(points 4 319 310 340 310 340 227 288 227)))
+(stackingOrder 2 1 0))))
+(device 101 FROMARRAY
+(properties
+(name "Frequency")
+(expr 1 "Ary[A]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(input 2
+(name "A")
+(optional yes))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(configuration
+(connect I2:1 D0:1)
+(connect D4:1 D0:2)
+(connect I3:1 D1:1)
+(connect D4:1 D1:2)
+(connect I7:1 D2:1)
+(connect D2:1 D3:1)
+(connect I1:1 D3:2)
+(connect D0:1 D3:3)
+(connect D1:1 D3:4)
+(connect I6:1 D3:5)
+(connect D5:1 D3:6)
+(connect D6:1 D3:7)
+(connect D8:1 D3:8)
+(connect I8:1 D3:9)
+(connect D10:1 D3:10)
+(connect I4:1 D5:1)
+(connect D4:1 D5:2)
+(connect I5:1 D6:1)
+(connect D4:1 D6:2)
+(connect D7:1 D8:1)
+(connect D4:1 D8:2)
+(connect I9:1 D9:1)
+(connect I10:1 D9:2)
+(connect D9:1 D10:1)
+(connect D4:1 D10:2)))
+(contextCarrier
+(active detail)
+(detail
+(extent 688 300)
+(anchorPt 391 168)
+(configuration
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 50 54))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 140 90))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 81 54))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 150 160))
+(devCarrierFor 84
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 20 410))
+(devCarrierFor 88
+(active icon)
+(icon
+(extent 33 105))
+(terminals on)
+(pinCenter 480 380))
+(devCarrierFor 89
+(active icon)
+(icon
+(extent 65 14))
+(open
+(extent 99 79))
+(pinCenter -10 200))
+(devCarrierFor 90
+(active icon)
+(icon
+(extent 51 54))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 140 240))
+(devCarrierFor 91
+(active icon)
+(icon
+(extent 82 54))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 160 310))
+(devCarrierFor 98
+(active icon)
+(icon
+(extent 67 15))
+(terminals on)
+(pinCenter 390 180))
+(devCarrierFor 99
+(active icon)
+(icon
+(extent 38 54))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 470 200))
+(devCarrierFor 100
+(active icon)
+(icon
+(extent 83 34))
+(terminals on)
+(pinCenter 150 450))
+(devCarrierFor 101
+(active icon)
+(icon
+(extent 62 54))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 380 450))
+(connect I2:1 D0:1
+(points 4 -391 -129 -370 -129 -370 70 112 70))
+(connect D4:1 D0:2
+(points 4 25 200 80 200 80 110 112 110))
+(connect I3:1 D1:1
+(points 6 -391 -99 -380 -99 -380 80 30 80 30 140 107 140))
+(connect D4:1 D1:2
+(points 4 25 200 80 200 80 180 107 180))
+(connect I7:1 D2:1
+(points 4 -391 21 -40 21 -40 410 -9 410))
+(connect D2:1 D3:1
+(points 6 48 410 60 410 60 380 230 380 230 330 461 330))
+(connect I1:1 D3:2
+(points 8 -391 -159 50 -159 50 210 60 210 60 360 220 360 220 340 461 340))
+(connect D0:1 D3:3
+(points 6 167 70 220 70 220 200 370 200 370 350 461 350))
+(connect D1:1 D3:4
+(points 6 193 140 210 140 210 210 360 210 360 360 461 360))
+(connect I6:1 D3:5
+(points 4 -391 -9 50 -9 50 370 461 370))
+(connect D5:1 D3:6
+(points 6 168 220 190 220 190 230 350 230 350 380 461 380))
+(connect D6:1 D3:7
+(points 4 203 290 240 290 240 390 461 390))
+(connect D8:1 D3:8
+(points 6 491 180 520 180 520 460 440 460 440 400 461 400))
+(connect I8:1 D3:9
+(points 6 -391 51 70 51 70 400 430 400 430 410 461 410))
+(connect D10:1 D3:10
+(points 4 413 430 430 430 430 420 461 420))
+(connect I4:1 D5:1
+(points 4 -391 -69 24 -69 24 220 112 220))
+(connect D4:1 D5:2
+(points 4 25 200 40 200 40 260 112 260))
+(connect I5:1 D6:1
+(points 6 -391 -39 -380 -39 -380 270 70 270 70 290 116 290))
+(connect D4:1 D6:2
+(points 6 25 200 40 200 40 260 90 260 90 330 116 330))
+(connect D7:1 D8:1
+(points 2 426 180 448 180))
+(connect D4:1 D8:2
+(points 6 25 200 180 200 180 210 200 210 200 220 448 220))
+(connect I9:1 D9:1
+(points 4 -391 81 -90 81 -90 440 106 440))
+(connect I10:1 D9:2
+(points 4 -391 111 -100 111 -100 460 106 460))
+(connect D9:1 D10:1
+(points 4 194 450 220 450 220 430 346 430))
+(connect D4:1 D10:2
+(points 10 25 200 40 200 40 260 90 260 90 330 100 330 100 390 210 390 210 470
+346 470)))
+(stackingOrder 5 2 4 1 9 8 0 6 7 10 3))))
+(device 8 CONTEXT
+(properties
+(name "Field & Frequency Sweeps")
+(trigMode deg)
+(nextID 37)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "range")
+(optional yes))
+(input 2
+(name "points")
+(optional yes))
+(input 3
+(name "VOe")
+(optional yes))
+(output 1
+(type data)
+(name "Field UP")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Real UP")
+(lock constraints)
+(optional yes))
+(output 3
+(type data)
+(name "Imag UP")
+(lock constraints)
+(optional yes))
+(output 4
+(type data)
+(name "Real DN")
+(lock constraints)
+(optional yes))
+(output 5
+(type data)
+(name "Imag DN")
+(lock constraints)
+(optional yes))
+(output 6
+(type data)
+(name "Field DN")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 6 HPIDSTATE
+(properties
+(name "DC field"))
+(interface
+(input 1
+(name "OFFSET")
+(tag "OFFSET")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)))
+(implementation
+(filename "hp33120a.cid")
+(driver "generator")
+(state
+(idComp
+(name "RS232")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "FAST_CONTROLLER")
+(typeStr "Enum")
+(state "Valid")
+(value "YES"))
+(idComp
+(name "INCREMENTAL_MODE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "MIN_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 20))
+(idComp
+(name "MAX_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 80))
+(idComp
+(name "DUTYCYCLE")
+(typeStr "Int16")
+(state "Valid")
+(value 50))
+(idComp
+(name "AM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "SWEEP_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "BM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FSK_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "CATCH_STATE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "UNITS")
+(typeStr "Enum")
+(state "Valid")
+(value "VPP"))
+(idComp
+(name "LOAD")
+(typeStr "Enum")
+(state "Valid")
+(value "INFINITY"))
+(idComp
+(name "AMP_MIN")
+(typeStr "Real")
+(state "Valid")
+(value 5))
+(idComp
+(name "AMP_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "AMPLITUDE")
+(typeStr "Real")
+(state "Valid")
+(value 0.2))
+(idComp
+(name "OFFSET")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "DC"))
+(idComp
+(name "USER")
+(typeStr "Text")
+(state "Valid")
+(value "SINC"))
+(idComp
+(name "MAX_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MAX_FREQ2")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MIN_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 0.0001))
+(idComp
+(name "FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "APPLY")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "START_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "STOP_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FSK_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "SWEEP_TIME")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "SWEEP_SPACE")
+(typeStr "Enum")
+(state "Valid")
+(value "LIN"))
+(idComp
+(name "TRIG_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "IMM"))
+(idComp
+(name "FSK_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "FSK_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "OFF_MIN")
+(typeStr "Real")
+(state "Valid")
+(value -10))
+(idComp
+(name "OFF_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "FM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "AM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "FM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_DEPTH")
+(typeStr "Int16")
+(state "Valid")
+(value 100))
+(idComp
+(name "MAX_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FM_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "BM_CYCLES")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "BM_PHASE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "BM_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "AM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "BOTH"))
+(idComp
+(name "BM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "TURN_STATE_ON")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "SYNC_TERMINAL")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "ARB_NAME")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "BYTE_ORDER")
+(typeStr "Enum")
+(state "Valid")
+(value "NORM"))
+(idComp
+(name "NUMBER_POINTS")
+(typeStr "Int16")
+(state "Valid")
+(value 8))
+(idComp
+(name "PSC")
+(typeStr "Enum")
+(state "Invalid")
+(value "OFF"))
+(idComp
+(name "STATUS_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "EVENT_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "OPC_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_TEXT")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "PHASE_LOCK_OPTION")
+(typeStr "Enum")
+(state "Valid")
+(value "NO"))
+(idComp
+(name "PHASE_ADJUST")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "PHASE_ERROR")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "OUTPUT_TRIG_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "QUESTIONABLE_ENABLE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "DONE2")
+(typeStr "Int16")
+(state "Valid")
+(value 0)))))
+(device 10 FORMULA
+(properties
+(name "Step")
+(expr 1 "2*range/points"))
+(interface
+(input 1
+(name "range")
+(optional yes))
+(input 2
+(name "points")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 11 FORMULA
+(properties
+(name "negative limit")
+(expr 1 "-range"))
+(interface
+(input 1
+(name "range")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 13 FORRANGE
+(properties
+(name "Field sweep (UP)")
+(from -10)
+(thru 10)
+(step 1))
+(interface
+(input 1
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Step")
+(tag "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 14 FORRANGE
+(properties
+(name "Field sweep (DN)")
+(from -10)
+(thru 10)
+(step 1))
+(interface
+(input 1
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 2
+(name "From")
+(tag "From")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(input 3
+(name "Step")
+(tag "Step")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 15 FORMULA
+(properties
+(name "reverse")
+(expr 1 "-A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 16 HPIDSTATE
+(properties
+(name "DC field"))
+(interface
+(input 1
+(name "OFFSET")
+(tag "OFFSET")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)))
+(implementation
+(filename "hp33120a.cid")
+(driver "generator")
+(state
+(idComp
+(name "RS232")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "FAST_CONTROLLER")
+(typeStr "Enum")
+(state "Valid")
+(value "YES"))
+(idComp
+(name "INCREMENTAL_MODE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "MIN_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 20))
+(idComp
+(name "MAX_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 80))
+(idComp
+(name "DUTYCYCLE")
+(typeStr "Int16")
+(state "Valid")
+(value 50))
+(idComp
+(name "AM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "SWEEP_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "BM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FSK_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "CATCH_STATE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "UNITS")
+(typeStr "Enum")
+(state "Valid")
+(value "VPP"))
+(idComp
+(name "LOAD")
+(typeStr "Enum")
+(state "Valid")
+(value "INFINITY"))
+(idComp
+(name "AMP_MIN")
+(typeStr "Real")
+(state "Valid")
+(value 5))
+(idComp
+(name "AMP_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "AMPLITUDE")
+(typeStr "Real")
+(state "Valid")
+(value 0.2))
+(idComp
+(name "OFFSET")
+(typeStr "Real")
+(state "Valid")
+(value -10))
+(idComp
+(name "FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "DC"))
+(idComp
+(name "USER")
+(typeStr "Text")
+(state "Valid")
+(value "SINC"))
+(idComp
+(name "MAX_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MAX_FREQ2")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MIN_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 0.0001))
+(idComp
+(name "FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "APPLY")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "START_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "STOP_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FSK_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "SWEEP_TIME")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "SWEEP_SPACE")
+(typeStr "Enum")
+(state "Valid")
+(value "LIN"))
+(idComp
+(name "TRIG_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "IMM"))
+(idComp
+(name "FSK_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "FSK_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "OFF_MIN")
+(typeStr "Real")
+(state "Valid")
+(value -10))
+(idComp
+(name "OFF_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "FM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "AM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "FM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_DEPTH")
+(typeStr "Int16")
+(state "Valid")
+(value 100))
+(idComp
+(name "MAX_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FM_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "BM_CYCLES")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "BM_PHASE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "BM_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "AM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "BOTH"))
+(idComp
+(name "BM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "TURN_STATE_ON")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "SYNC_TERMINAL")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "ARB_NAME")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "BYTE_ORDER")
+(typeStr "Enum")
+(state "Valid")
+(value "NORM"))
+(idComp
+(name "NUMBER_POINTS")
+(typeStr "Int16")
+(state "Valid")
+(value 8))
+(idComp
+(name "PSC")
+(typeStr "Enum")
+(state "Invalid")
+(value "OFF"))
+(idComp
+(name "STATUS_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "EVENT_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "OPC_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_TEXT")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "PHASE_LOCK_OPTION")
+(typeStr "Enum")
+(state "Valid")
+(value "NO"))
+(idComp
+(name "PHASE_ADJUST")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "PHASE_ERROR")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "OUTPUT_TRIG_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "QUESTIONABLE_ENABLE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "DONE2")
+(typeStr "Int16")
+(state "Valid")
+(value 0)))))
+(device 20 CONTEXT
+(properties
+(name "Processing Data (UP)")
+(trigMode deg)
+(nextID 11)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "Real")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Imaginary")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Single sweep")
+(transactions 5 "WRITE TEXT \"SING\" EOL" "WRITE TEXT \"CHAN1\" EOL"
+"WRITE TEXT \"AUTO\" EOL" "WRITE TEXT \"CHAN2\" EOL" "WRITE TEXT \"AUTO\" EOL"))
+(implementation
+(iopath "analyzer")))
+(device 1 IODEVICE
+(properties
+(name "DATA: CH1&CH2")
+(transactions 8 "WRITE TEXT \"CHAN1\" EOL" "WRITE TEXT \"OUTPFORM\" EOL"
+"WRITE TEXT \"FORM4\" EOL" "READ TEXT x CPX ARRAY:11" "WRITE TEXT \"CHAN2\" EOL"
+"WRITE TEXT \"OUTPFORM\" EOL" "WRITE TEXT \"FORM4\" EOL"
+"READ TEXT y CPX ARRAY:11"))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "y")
+(optional yes)))
+(implementation
+(iopath "analyzer")))
+(device 2 FORMULA
+(properties
+(name "Real")
+(expr 1 "re(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "Imaginary")
+(expr 1 "re(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:1 D2:1)
+(connect D1:2 D3:1)
+(connect D2:1 O1:1)
+(connect D3:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt -80 -48)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 520 250))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 103 25))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 520 300))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 30 14))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 650 160))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 59 14))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 660 400))
+(connect D0:0 D1:0
+(points 2 520 260 520 285))
+(connect D1:1 D2:1
+(points 4 574 290 590 290 590 160 632 160))
+(connect D1:2 D3:1
+(points 4 574 310 590 310 590 400 628 400))
+(connect D2:1 O1:1
+(points 4 667 160 690 160 690 117 429 117))
+(connect D3:1 O2:1
+(points 4 692 400 710 400 710 277 429 277)))
+(stackingOrder 3 2 0 1))))
+(device 23 CONTEXT
+(properties
+(name "Processing Data (DN)")
+(trigMode deg)
+(nextID 7)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(output 1
+(type data)
+(name "Real")
+(lock constraints)
+(optional yes))
+(output 2
+(type data)
+(name "Imaginary")
+(lock constraints)
+(optional yes)))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Single sweep")
+(transactions 5 "WRITE TEXT \"SING\" EOL" "WRITE TEXT \"CHAN1\" EOL"
+"WRITE TEXT \"AUTO\" EOL" "WRITE TEXT \"CHAN2\" EOL" "WRITE TEXT \"AUTO\" EOL"))
+(implementation
+(iopath "analyzer")))
+(device 1 IODEVICE
+(properties
+(name "DATA: CH1&CH2")
+(transactions 8 "WRITE TEXT \"CHAN1\" EOL" "WRITE TEXT \"OUTPFORM\" EOL"
+"WRITE TEXT \"FORM4\" EOL" "READ TEXT x CPX ARRAY:11" "WRITE TEXT \"CHAN2\" EOL"
+"WRITE TEXT \"OUTPFORM\" EOL" "WRITE TEXT \"FORM4\" EOL"
+"READ TEXT y CPX ARRAY:11"))
+(interface
+(output 1
+(name "x")
+(optional yes))
+(output 2
+(name "y")
+(optional yes)))
+(implementation
+(iopath "analyzer")))
+(device 2 FORMULA
+(properties
+(name "Real")
+(expr 1 "re(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 3 FORMULA
+(properties
+(name "Imaginary")
+(expr 1 "re(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D0:0 D1:0)
+(connect D1:1 D2:1)
+(connect D1:2 D3:1)
+(connect D2:1 O1:1)
+(connect D3:1 O2:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt -149 -2)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 82 15))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 510 200))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 103 25))
+(open
+(extent 225 64))
+(terminals on)
+(pinCenter 510 250))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 30 14))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 630 210))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 59 14))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 630 270))
+(connect D0:0 D1:0
+(points 2 510 210 510 235))
+(connect D1:1 D2:1
+(points 4 564 240 580 240 580 210 612 210))
+(connect D1:2 D3:1
+(points 4 564 260 580 260 580 270 598 270))
+(connect D2:1 O1:1
+(points 4 647 210 670 210 670 71 498 71))
+(connect D3:1 O2:1
+(points 4 662 270 680 270 680 231 498 231)))
+(stackingOrder 0 2 3 1))))
+(device 25 COLLECTOR
+(properties
+(name "Field Array (UP)"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 26 COLLECTOR
+(properties
+(name "Field Array (DN)"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 29 COLLECTOR
+(properties
+(name "Real (UP)")
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 30 COLLECTOR
+(properties
+(name "Imaginary (UP)")
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 31 COLLECTOR
+(properties
+(name "Real (DN)")
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 32 COLLECTOR
+(properties
+(name "Imaginary (DN)")
+(output1D 0))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))
+(input 2
+(type trigger)
+(name "XEQ")
+(lock name constraints))
+(output 1
+(name "Array")
+(tag "Array"))))
+(device 33 FORMULA
+(properties
+(name "V to Oe")
+(expr 1 "VOe*V"))
+(interface
+(input 1
+(name "V")
+(optional yes))
+(input 2
+(name "VOe")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 34 FORMULA
+(properties
+(name "V to Oe")
+(expr 1 "VOe*V"))
+(interface
+(input 1
+(name "V")
+(optional yes))
+(input 2
+(name "VOe")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 36 HPIDSTATE
+(properties
+(name "Field = 0"))
+(implementation
+(filename "hp33120a.cid")
+(driver "generator")
+(state
+(idComp
+(name "RS232")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "FAST_CONTROLLER")
+(typeStr "Enum")
+(state "Valid")
+(value "YES"))
+(idComp
+(name "INCREMENTAL_MODE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "MIN_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 20))
+(idComp
+(name "MAX_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 80))
+(idComp
+(name "DUTYCYCLE")
+(typeStr "Int16")
+(state "Valid")
+(value 50))
+(idComp
+(name "AM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "SWEEP_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "BM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FSK_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "CATCH_STATE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "UNITS")
+(typeStr "Enum")
+(state "Valid")
+(value "VPP"))
+(idComp
+(name "LOAD")
+(typeStr "Enum")
+(state "Valid")
+(value "INFINITY"))
+(idComp
+(name "AMP_MIN")
+(typeStr "Real")
+(state "Valid")
+(value 0.1))
+(idComp
+(name "AMP_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 20))
+(idComp
+(name "AMPLITUDE")
+(typeStr "Real")
+(state "Valid")
+(value 0.2))
+(idComp
+(name "OFFSET")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "DC"))
+(idComp
+(name "USER")
+(typeStr "Text")
+(state "Valid")
+(value "SINC"))
+(idComp
+(name "MAX_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MAX_FREQ2")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MIN_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 0.0001))
+(idComp
+(name "FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "APPLY")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "START_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "STOP_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FSK_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "SWEEP_TIME")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "SWEEP_SPACE")
+(typeStr "Enum")
+(state "Valid")
+(value "LIN"))
+(idComp
+(name "TRIG_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "IMM"))
+(idComp
+(name "FSK_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "FSK_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "OFF_MIN")
+(typeStr "Real")
+(state "Valid")
+(value -10))
+(idComp
+(name "OFF_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "FM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "AM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "FM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_DEPTH")
+(typeStr "Int16")
+(state "Valid")
+(value 100))
+(idComp
+(name "MAX_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FM_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "BM_CYCLES")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "BM_PHASE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "BM_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "AM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "BOTH"))
+(idComp
+(name "BM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "TURN_STATE_ON")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "SYNC_TERMINAL")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "ARB_NAME")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "BYTE_ORDER")
+(typeStr "Enum")
+(state "Valid")
+(value "NORM"))
+(idComp
+(name "NUMBER_POINTS")
+(typeStr "Int16")
+(state "Valid")
+(value 8))
+(idComp
+(name "PSC")
+(typeStr "Enum")
+(state "Invalid")
+(value "OFF"))
+(idComp
+(name "STATUS_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "EVENT_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "OPC_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_TEXT")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "PHASE_LOCK_OPTION")
+(typeStr "Enum")
+(state "Valid")
+(value "NO"))
+(idComp
+(name "PHASE_ADJUST")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "PHASE_ERROR")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "OUTPUT_TRIG_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "QUESTIONABLE_ENABLE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "DONE2")
+(typeStr "Int16")
+(state "Valid")
+(value 0)))))
+(configuration
+(connect D7:0 D0:0)
+(connect D3:1 D0:1)
+(connect I1:1 D1:1)
+(connect I2:1 D1:2)
+(connect I1:1 D2:1)
+(connect I1:1 D3:1)
+(connect D2:1 D3:2)
+(connect D1:1 D3:3)
+(connect D3:0 D4:0)
+(connect I1:1 D4:1)
+(connect D2:1 D4:2)
+(connect D1:1 D4:3)
+(connect D4:1 D5:1)
+(connect D8:0 D6:0)
+(connect D5:1 D6:1)
+(connect D3:1 D7:0)
+(connect D5:1 D8:0)
+(connect D15:1 D9:1)
+(connect D3:0 D9:2)
+(connect D16:1 D10:1)
+(connect D4:0 D10:2)
+(connect D7:1 D11:1)
+(connect D3:0 D11:2)
+(connect D7:2 D12:1)
+(connect D3:0 D12:2)
+(connect D8:1 D13:1)
+(connect D4:0 D13:2)
+(connect D8:2 D14:1)
+(connect D4:0 D14:2)
+(connect D3:1 D15:1)
+(connect I3:1 D15:2)
+(connect D5:1 D16:1)
+(connect I3:1 D16:2)
+(connect D4:0 D17:0)
+(connect D9:1 O1:1)
+(connect D11:1 O2:1)
+(connect D12:1 O3:1)
+(connect D13:1 O4:1)
+(connect D14:1 O5:1)
+(connect D10:1 O6:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 214 173)
+(configuration
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 48 15))
+(open
+(extent 214 213)
+(visiblePanels 2 "HP33120" "MAIN"))
+(terminals on)
+(pinCenter 450 190))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 29 25))
+(open
+(extent 71 42))
+(terminals on)
+(pinCenter 40 290))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 79 15))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 50 120))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 104 34))
+(open
+(extent 94 79))
+(terminals on)
+(pinCenter 180 160))
+(devCarrierFor 14
+(active icon)
+(icon
+(extent 105 34))
+(open
+(extent 94 79))
+(terminals on)
+(pinCenter 180 240))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 45 15))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 290 320))
+(devCarrierFor 16
+(active icon)
+(icon
+(extent 48 15))
+(open
+(extent 214 213)
+(visiblePanels 2 "HP33120" "MAIN"))
+(terminals on)
+(pinCenter 440 320))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 135 25))
+(terminals on)
+(pinCenter 450 140))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 133 25))
+(terminals on)
+(pinCenter 440 280))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 93 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 570 50))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 94 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 580 400))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 59 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 600 120))
+(devCarrierFor 30
+(active icon)
+(icon
+(extent 90 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 590 190))
+(devCarrierFor 31
+(active icon)
+(icon
+(extent 60 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 600 260))
+(devCarrierFor 32
+(active icon)
+(icon
+(extent 91 25))
+(open
+(extent 96 54))
+(terminals on)
+(pinCenter 580 330))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 43 25))
+(open
+(extent 71 42))
+(terminals on)
+(pinCenter 480 40))
+(devCarrierFor 34
+(active icon)
+(icon
+(extent 43 25))
+(open
+(extent 71 42))
+(terminals on)
+(pinCenter 470 390))
+(devCarrierFor 36
+(active icon)
+(icon
+(extent 51 15))
+(open
+(extent 214 213)
+(visiblePanels 2 "HP33120" "MAIN"))
+(terminals on)
+(pinCenter 180 370))
+(connect D7:0 D0:0
+(points 2 450 155 450 180))
+(connect D3:1 D0:1
+(points 4 234 160 260 160 260 190 423 190))
+(connect I1:1 D1:1
+(points 4 -214 -124 0 -124 0 280 23 280))
+(connect I2:1 D1:2
+(points 4 -214 -24 -20 -24 -20 300 23 300))
+(connect I1:1 D2:1
+(points 4 -214 -124 0 -124 0 120 8 120))
+(connect I1:1 D3:1
+(points 6 -214 -124 0 -124 0 90 120 90 120 150 125 150))
+(connect D2:1 D3:2
+(points 4 92 120 110 120 110 160 125 160))
+(connect D1:1 D3:3
+(points 6 57 290 70 290 70 250 100 250 100 170 125 170))
+(connect D3:0 D4:0
+(points 2 180 179 180 220))
+(connect I1:1 D4:1
+(points 4 -214 -124 0 -124 0 230 125 230))
+(connect D2:1 D4:2
+(points 4 92 120 110 120 110 240 125 240))
+(connect D1:1 D4:3
+(points 4 57 290 70 290 70 250 125 250))
+(connect D4:1 D5:1
+(points 6 235 240 260 240 260 280 250 280 250 320 265 320))
+(connect D8:0 D6:0
+(points 2 440 295 440 310))
+(connect D5:1 D6:1
+(points 2 315 320 413 320))
+(connect D3:1 D7:0
+(points 5 234 160 250 160 250 110 450 110 450 125))
+(connect D5:1 D8:0
+(points 5 315 320 350 320 350 250 440 250 440 265))
+(connect D15:1 D9:1
+(points 2 504 40 521 40))
+(connect D3:0 D9:2
+(points 13 180 179 180 200 260 200 260 220 500 220 500 200 520 200 520 170 540
+170 540 100 510 100 510 60 521 60))
+(connect D16:1 D10:1
+(points 2 494 390 530 390))
+(connect D4:0 D10:2
+(points 9 180 259 180 340 230 340 230 350 380 350 380 420 480 420 480 410 530
+410))
+(connect D7:1 D11:1
+(points 4 520 130 530 130 530 110 568 110))
+(connect D3:0 D11:2
+(points 11 180 179 180 200 260 200 260 220 500 220 500 200 520 200 520 170 540
+170 540 130 568 130))
+(connect D7:2 D12:1
+(points 4 520 150 530 150 530 180 542 180))
+(connect D3:0 D12:2
+(points 7 180 179 180 200 260 200 260 220 500 220 500 200 542 200))
+(connect D8:1 D13:1
+(points 4 509 270 530 270 530 250 567 250))
+(connect D4:0 D13:2
+(points 9 180 259 180 290 270 290 270 240 450 240 450 260 540 260 540 270 567
+270))
+(connect D8:2 D14:1
+(points 4 509 290 520 290 520 320 532 320))
+(connect D4:0 D14:2
+(points 7 180 259 180 340 230 340 230 350 450 350 450 340 532 340))
+(connect D3:1 D15:1
+(points 4 234 160 250 160 250 30 456 30))
+(connect I3:1 D15:2
+(points 4 -214 76 -10 76 -10 50 456 50))
+(connect D5:1 D16:1
+(points 4 315 320 390 320 390 380 446 380))
+(connect I3:1 D16:2
+(points 4 -214 76 40 76 40 400 446 400))
+(connect D4:0 D17:0
+(points 2 180 259 180 360))
+(connect D9:1 O1:1
+(points 4 619 50 630 50 630 -154 135 -154))
+(connect D11:1 O2:1
+(points 4 632 120 639 120 639 -104 135 -104))
+(connect D12:1 O3:1
+(points 4 637 190 641 190 641 -54 135 -54))
+(connect D13:1 O4:1
+(points 4 632 260 639 260 639 -4 135 -4))
+(connect D14:1 O5:1
+(points 4 628 330 637 330 637 46 135 46))
+(connect D10:1 O6:1
+(points 4 629 400 637 400 637 96 135 96)))
+(stackingOrder 12 13 14 10 6 17 15 11 16 1 4 0 9 5 8 7 3 2))))
+(device 9 CONTEXT
+(properties
+(name "Initial Analyser and Generator States")
+(trigMode deg)
+(nextID 10)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "REG")
+(optional yes))
+(input 2
+(name "StartFREQ")
+(optional yes))
+(input 3
+(name "StopFreq")
+(optional yes))
+(input 4
+(name "InV")
+(optional yes)))
+(deviceList
+(device 2 IODEVICE
+(properties
+(name "Sweep time and Auto Scale")
+(transactions 6 "WRITE TEXT \"SWET0.2\" EOL" "WRITE TEXT \"SING\" EOL"
+"WRITE TEXT \"CHAN1\" EOL" "WRITE TEXT \"AUTO\" EOL" "WRITE TEXT \"CHAN2\" EOL"
+"WRITE TEXT \"AUTO\" EOL"))
+(implementation
+(iopath "analyzer")))
+(device 6 HPIDSTATE
+(properties
+(name "Initial Generator State"))
+(interface
+(input 1
+(name "OFFSET")
+(tag "OFFSET")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)))
+(implementation
+(filename "hp33120a.cid")
+(driver "generator")
+(state
+(idComp
+(name "RS232")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "FAST_CONTROLLER")
+(typeStr "Enum")
+(state "Valid")
+(value "YES"))
+(idComp
+(name "INCREMENTAL_MODE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "MIN_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 20))
+(idComp
+(name "MAX_DUTY")
+(typeStr "Int16")
+(state "Valid")
+(value 80))
+(idComp
+(name "DUTYCYCLE")
+(typeStr "Int16")
+(state "Valid")
+(value 50))
+(idComp
+(name "AM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "SWEEP_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "BM_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "FSK_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "CATCH_STATE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "UNITS")
+(typeStr "Enum")
+(state "Valid")
+(value "VPP"))
+(idComp
+(name "LOAD")
+(typeStr "Enum")
+(state "Valid")
+(value "INFINITY"))
+(idComp
+(name "AMP_MIN")
+(typeStr "Real")
+(state "Valid")
+(value 5))
+(idComp
+(name "AMP_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "AMPLITUDE")
+(typeStr "Real")
+(state "Valid")
+(value 0.2))
+(idComp
+(name "OFFSET")
+(typeStr "Real")
+(state "Valid")
+(value -10))
+(idComp
+(name "FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "DC"))
+(idComp
+(name "USER")
+(typeStr "Text")
+(state "Valid")
+(value "SINC"))
+(idComp
+(name "MAX_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MAX_FREQ2")
+(typeStr "Real")
+(state "Valid")
+(value 15000000))
+(idComp
+(name "MIN_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 0.0001))
+(idComp
+(name "FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "APPLY")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "START_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "STOP_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FSK_FREQ")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "SWEEP_TIME")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "SWEEP_SPACE")
+(typeStr "Enum")
+(state "Valid")
+(value "LIN"))
+(idComp
+(name "TRIG_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "IMM"))
+(idComp
+(name "FSK_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "FSK_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "OFF_MIN")
+(typeStr "Real")
+(state "Valid")
+(value -10))
+(idComp
+(name "OFF_MAX")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "FM_FUNCTION")
+(typeStr "Enum")
+(state "Valid")
+(value "SIN"))
+(idComp
+(name "AM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "FM_FREQUENCY")
+(typeStr "Real")
+(state "Valid")
+(value 10))
+(idComp
+(name "AM_DEPTH")
+(typeStr "Int16")
+(state "Valid")
+(value 100))
+(idComp
+(name "MAX_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 1000))
+(idComp
+(name "FM_DEV")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "BM_CYCLES")
+(typeStr "Real")
+(state "Valid")
+(value 1))
+(idComp
+(name "BM_PHASE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "BM_RATE")
+(typeStr "Real")
+(state "Valid")
+(value 100))
+(idComp
+(name "AM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "BOTH"))
+(idComp
+(name "BM_SOURCE")
+(typeStr "Enum")
+(state "Valid")
+(value "INT"))
+(idComp
+(name "TURN_STATE_ON")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "SYNC_TERMINAL")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "ARB_NAME")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "BYTE_ORDER")
+(typeStr "Enum")
+(state "Valid")
+(value "NORM"))
+(idComp
+(name "NUMBER_POINTS")
+(typeStr "Int16")
+(state "Valid")
+(value 8))
+(idComp
+(name "PSC")
+(typeStr "Enum")
+(state "Invalid")
+(value "OFF"))
+(idComp
+(name "STATUS_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "EVENT_ENABLE")
+(typeStr "Int16")
+(state "Invalid")
+(value 0))
+(idComp
+(name "OPC_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_MODE")
+(typeStr "Enum")
+(state "Valid")
+(value "ON"))
+(idComp
+(name "DISP_TEXT")
+(typeStr "Text")
+(state "Invalid")
+(value ""))
+(idComp
+(name "PHASE_LOCK_OPTION")
+(typeStr "Enum")
+(state "Valid")
+(value "NO"))
+(idComp
+(name "PHASE_ADJUST")
+(typeStr "Real")
+(state "Valid")
+(value 0))
+(idComp
+(name "PHASE_ERROR")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "OUTPUT_TRIG_STATE")
+(typeStr "Enum")
+(state "Valid")
+(value "OFF"))
+(idComp
+(name "QUESTIONABLE_ENABLE")
+(typeStr "Int16")
+(state "Valid")
+(value 0))
+(idComp
+(name "DONE2")
+(typeStr "Int16")
+(state "Valid")
+(value 0)))))
+(device 7 PNPTRANS
+(properties
+(name "To/From Analyzer")
+(transactions 2
+"hp875x_recallOrClearReg(instrHandle, hp875x_RC_RECALL_REG, regNum)"
+"hp875x_calCorrection(instrHandle, hp875x_CALIB_ON)")
+(parmInfo 7 "3" "T 5000" "T 0" "T 0" "2" "T 5000" "T 0"))
+(interface
+(input 1
+(name "regNum")
+(requires
+(datatype Int16))
+(optional yes))
+(output 1
+(name "activeCal")
+(optional yes)))
+(implementation
+(prefix "HP875X")
+(ioDev "analyzer")))
+(device 9 PNPTRANS
+(properties
+(name "Initial installation of the analyser")
+(transactions 8
+"hp875x_freqStimulus(instrHandle, hp875x_STIM_STRT_STOP, StartFreq, StopFreq, hp875x_PNTS_11)"
+"hp875x_channelSelect(instrHandle, hp875x_CH1)"
+"hp875x_measType(instrHandle, hp875x_S_PAR11, hp875x_CONV_OFF)"
+"hp875x_displaySelect(instrHandle, hp875x_CH1, hp875x_DISP_DATA, hp875x_DISP_REAL)"
+"hp875x_channelSelect(instrHandle, hp875x_CH2)"
+"hp875x_measType(instrHandle, hp875x_S_PAR11, hp875x_CONV_OFF)"
+"hp875x_displaySelect(instrHandle, hp875x_CH2, hp875x_DISP_DATA, hp875x_DISP_IMAG)"
+"hp875x_dualSplit(instrHandle, hp875x_DUAL_CHAN_ON, hp875x_SPLIT_CHAN_ON)")
+(parmInfo 34 "5" "T 5000" "T 0" "T 0" "T 0" "T 0" "2" "T 5000" "T 0" "3"
+"T 5000" "T 0" "T 0" "4" "T 5000" "T 0" "T 0" "T 0" "2" "T 5000" "T 0" "3"
+"T 5000" "T 0" "T 0" "4" "T 5000" "T 0" "T 0" "T 0" "3" "T 5000" "T 0" "T 0"))
+(interface
+(input 1
+(name "StartFreq")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(input 2
+(name "StopFreq")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "cur_points")
+(optional yes)))
+(implementation
+(prefix "HP875X")
+(ioDev "analyzer")))
+(configuration
+(connect D3:0 D0:0)
+(connect D0:0 D1:0)
+(connect I4:1 D1:1)
+(connect I1:1 D2:1)
+(connect D2:0 D3:0)
+(connect I2:1 D3:1)
+(connect I3:1 D3:2)))
+(contextCarrier
+(active detail)
+(detail
+(extent 310 300)
+(anchorPt 335 202)
+(configuration
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 267 35))
+(open
+(extent 355 140))
+(terminals on)
+(font "Arial" 20)
+(titleFont "Arial" 20)
+(pinCenter 200 410))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 225 45))
+(open
+(extent 295 230)
+(visiblePanels 2 "HP33120" "MAIN"))
+(terminals on)
+(titleFont "Arial" 20)
+(pinCenter 220 580))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 171 75))
+(open
+(extent 785 250))
+(terminals on)
+(font "Arial" 20)
+(titleFont "Arial" 20)
+(pinCenter 170 80))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 315 55))
+(open
+(extent 945 250))
+(terminals on)
+(font "Arial" 20)
+(titleFont "Arial" 20)
+(pinCenter 180 250))
+(connect D3:0 D0:0
+(points 4 180 280 180 300 200 300 200 390))
+(connect D0:0 D1:0
+(points 4 200 430 200 450 220 450 220 555))
+(connect I4:1 D1:1
+(points 4 -335 47 -320 47 -320 580 105 580))
+(connect I1:1 D2:1
+(points 4 -335 -163 -320 -163 -320 80 82 80))
+(connect D2:0 D3:0
+(points 4 170 120 170 140 180 140 180 220))
+(connect I2:1 D3:1
+(points 4 -335 -93 -320 -93 -320 230 20 230))
+(connect I3:1 D3:2
+(points 4 -335 -23 -320 -23 -320 270 20 270)))
+(stackingOrder 1 2 0 3))))
+(configuration
+(connect I2:1 D0:1)
+(connect D2:1 D1:1)
+(connect D2:2 D1:2)
+(connect D2:3 D1:3)
+(connect D2:4 D1:4)
+(connect D2:5 D1:5)
+(connect D2:6 D1:6)
+(connect I4:1 D1:7)
+(connect I7:1 D1:8)
+(connect I5:1 D1:9)
+(connect I6:1 D1:10)
+(connect D3:0 D2:0)
+(connect I2:1 D2:1)
+(connect I4:1 D2:2)
+(connect I3:1 D2:3)
+(connect I1:1 D3:1)
+(connect I5:1 D3:2)
+(connect I6:1 D3:3)
+(connect D0:1 D3:4)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 166 4)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 85 35))
+(open
+(extent 111 40))
+(terminals on)
+(font "Arial" 20)
+(titleFont "Arial" 20)
+(pinCenter 140 270))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 135 105))
+(terminals on)
+(titleFont "Arial" 20)
+(pinCenter 810 320))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 275 65))
+(terminals on)
+(titleFont "Arial" 20)
+(pinCenter 450 300))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 355 65))
+(terminals on)
+(titleFont "Arial" 20)
+(pinCenter 450 120))
+(connect I2:1 D0:1
+(points 6 -166 65 0 65 0 190 70 190 70 270 95 270))
+(connect D2:1 D1:1
+(points 2 590 270 740 270))
+(connect D2:2 D1:2
+(points 2 590 280 740 280))
+(connect D2:3 D1:3
+(points 2 590 290 740 290))
+(connect D2:4 D1:4
+(points 2 590 300 740 300))
+(connect D2:5 D1:5
+(points 2 590 310 740 310))
+(connect D2:6 D1:6
+(points 2 590 320 740 320))
+(connect I4:1 D1:7
+(points 14 -166 145 0 145 0 430 20 430 20 360 280 360 280 350 300 350 300 370
+600 370 600 340 610 340 610 330 740 330))
+(connect I7:1 D1:8
+(points 4 -166 265 620 265 620 340 740 340))
+(connect I5:1 D1:9
+(points 8 -166 185 0 185 0 550 50 550 50 380 610 380 610 350 740 350))
+(connect I6:1 D1:10
+(points 8 -166 225 0 225 0 670 60 670 60 370 290 370 290 360 740 360))
+(connect D3:0 D2:0
+(points 2 450 155 450 265))
+(connect I2:1 D2:1
+(points 10 -166 65 0 65 0 190 70 190 70 270 80 270 80 310 210 310 210 280 310
+280))
+(connect I4:1 D2:2
+(points 8 -166 145 0 145 0 430 20 430 20 360 280 360 280 300 310 300))
+(connect I3:1 D2:3
+(points 4 -166 105 62 105 62 320 310 320))
+(connect I1:1 D3:1
+(points 4 -166 25 -170 25 -170 100 270 100))
+(connect I5:1 D3:2
+(points 6 -166 185 0 185 0 550 50 550 50 110 270 110))
+(connect I6:1 D3:3
+(points 6 -166 225 0 225 0 670 60 670 60 120 270 120))
+(connect D0:1 D3:4
+(points 4 185 270 210 270 210 130 270 130)))
+(stackingOrder 0 2 1 3))))
+(device 293 LITERALCONSTANT
+(properties
+(name "Excel Directory"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"E:\\Documents and Settings\\Administrator\\My Documents\\S-parameters and Impedance Data\\S11\\S11_H"
+))
+(initValue Text
+(data  ""))))
+(configuration
+(connect D7:0 D8:0)
+(connect D2:1 D8:1)
+(connect D4:1 D8:2)
+(connect D5:1 D8:3)
+(connect D6:1 D8:4)
+(connect D1:1 D8:5)
+(connect D0:1 D8:6)
+(connect D9:1 D8:7))
+(ShowOnExecPanel))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
+(active panel)
+(panel
+(extent 1268 845)
+(widget 7 detail
+(relativeOrigin 570 430)
+(bg "Yellow Green")
+(fg "Black")
+(font "Arial" 48)
+(title off)
+(borderStyle none)
+(extent 161 131))
+(widget 0 detail
+(relativeOrigin 670 120)
+(font "Arial" 20)
+(title on)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 446 40)
+(showFormat real))
+(widget 1 detail
+(relativeOrigin 160 120)
+(font "Arial" 20)
+(title on)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 445 40)
+(showFormat real))
+(widget 6 detail
+(relativeOrigin 510 230)
+(font "Arial" 20)
+(title on)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 255 40)
+(showFormat int))
+(widget 2 detail
+(relativeOrigin 520 20)
+(font "Arial" 20)
+(title on)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 235 40)
+(showFormat int))
+(widget 5 detail
+(relativeOrigin 680 330)
+(font "Arial" 20)
+(title on)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 315 40)
+(showFormat real))
+(widget 4 detail
+(relativeOrigin 320 330)
+(font "Arial" 20)
+(title on)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 295 40)
+(showFormat real))
+(widget 3 detail
+(relativeOrigin 140 590)
+(bg "Red")
+(font "Arial" 20)
+(title on)
+(titleBg "Red")
+(titleFg "White")
+(titleFont "Arial" 20)
+(borderStyle flat)
+(extent 997 190)
+(editing enabled)))
+(detail
+(extent 492 348)
+(anchorPt 322 276)
+(configuration
+(devCarrierFor 67
+(active open)
+(icon
+(extent 419 15))
+(open
+(extent 469 40)
+(showFormat real))
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter -60 270))
+(devCarrierFor 68
+(active open)
+(icon
+(extent 418 0))
+(open
+(extent 468 40)
+(showFormat real))
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter -60 160))
+(devCarrierFor 165
+(active open)
+(icon
+(extent 157 0))
+(open
+(extent 235 40)
+(showFormat int))
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter -190 -210))
+(devCarrierFor 198
+(active open)
+(icon
+(extent 68 51)
+(iconImage "notepad.icn"))
+(open
+(extent 1015 200)
+(editing enabled))
+(bg "Red")
+(font "Arial" 20)
+(titleBg "Red")
+(titleFg "White")
+(titleFont "Arial" 20)
+(pinCenter 330 460))
+(devCarrierFor 272
+(active open)
+(icon
+(extent 245 15))
+(open
+(extent 307 40)
+(showFormat real))
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter -150 -120))
+(devCarrierFor 277
+(active open)
+(icon
+(extent 143 15))
+(open
+(extent 315 40)
+(showFormat real))
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter -150 -30))
+(devCarrierFor 279
+(active open)
+(icon
+(extent 133 0))
+(open
+(extent 255 40)
+(showFormat int))
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter -180 60))
+(devCarrierFor 282
+(active open)
+(icon)
+(open
+(extent 65 45))
+(title off)
+(bg "Yellow Green")
+(fg "Black")
+(font "Arial" 20)
+(titleBg "Yellow Green")
+(titleFont "Arial" 20)
+(pinCenter 640 -200))
+(devCarrierFor 292
+(active icon)
+(icon
+(extent 284 95))
+(terminals on)
+(titleBg "Red")
+(titleFg "White")
+(titleFont "Arial" 20)
+(pinCenter 640 50))
+(devCarrierFor 293
+(active icon)
+(icon
+(extent 175 45))
+(open
+(extent 1065 50))
+(font "Arial" 20)
+(titleBg "Red")
+(titleFg "White")
+(titleFont "Arial" 20)
+(pinCenter 320 230))
+(connect D7:0 D8:0
+(points 2 640 -175 640 0))
+(connect D2:1 D8:1
+(points 4 -70 -210 50 -210 50 20 495 20))
+(connect D4:1 D8:2
+(points 4 6 -120 40 -120 40 30 495 30))
+(connect D5:1 D8:3
+(points 4 10 -30 30 -30 30 40 495 40))
+(connect D6:1 D8:4
+(points 4 -50 60 -40 60 -40 50 495 50))
+(connect D1:1 D8:5
+(points 4 176 160 190 160 190 60 495 60))
+(connect D0:1 D8:6
+(points 4 177 270 200 270 200 70 495 70))
+(connect D9:1 D8:7
+(points 4 410 230 430 230 430 80 495 80)))
+(stackingOrder 2 5 6 3 7 0 1 4 9 8))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))

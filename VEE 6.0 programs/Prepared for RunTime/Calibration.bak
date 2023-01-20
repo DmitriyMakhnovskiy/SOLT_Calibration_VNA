@@ -1,0 +1,808 @@
+(saveFormat "2.3")
+(date "Tue 15/May/2018 17:12:06 ")
+(veerev "6.01")
+(platform "PC")
+(execMode v6)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig
+(iodevice "generator"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 10)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp33120a.cid")
+(idn "hp33120a")
+(ppFile "HP33120A")
+(ppAddr "GPIB0::10::INSTR")
+(eoiEnabled 1)
+(model "hp33120a"
+(standard 488)))
+(iodevice "analyzer"
+(type GPIB)
+(gateway "This host")
+(channel 7)
+(subchannel 7)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(idFileName "hp8752_3.cid")
+(ppFile "HP875X")
+(ppAddr "GPIB0::7::INSTR")
+(eoiEnabled 1)
+(model "he8753e"
+(standard 488))))
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(automationRefs
+(automationRef 1
+(libid "{00020813-0000-0000-C000-000000000046}")
+(desc "Microsoft Excel 8.0 Object Library")
+(filename "C:\\Program Files\\Microsoft Office\\Office\\EXCEL8.OLB")
+(verMajor 1)
+(verMinor 2)
+(lcid 0)))
+(activexControls
+(activexControl 1
+(libid "{05589fa0-c356-11ce-bf01-00aa0055595a}")
+(desc "Microsoft ActiveMovie Control")
+(filename "C:\\WINNT\\System32\\amcompat.tlb")
+(verMajor 2)
+(verMinor 0)
+(lcid 0))
+(activexControl 2
+(libid "{06DD38D0-D187-11CF-A80D-00C04FD74AD8}")
+(desc "Microsoft ActiveX Plugin")
+(filename "C:\\WINNT\\System32\\plugin.ocx")
+(verMajor 1)
+(verMinor 0)
+(lcid 0)))
+(properties
+(trigMode deg)
+(nextID 444)
+(popupTitleText "Untitled")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(device 302 CONTEXT
+(properties
+(name "PROGRAM: DO NOT CHANGE!")
+(trigMode deg)
+(nextID 45)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(interface
+(input 1
+(name "Start frequency")
+(requires
+(datatype Real64))
+(optional yes))
+(input 2
+(name "Stop frequency")
+(requires
+(datatype Real64))
+(optional yes))
+(input 3
+(name "Number of points")
+(requires
+(datatype Int32))
+(optional yes))
+(input 4
+(name "Power")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(optional yes))
+(input 5
+(name "IFBW")
+(requires
+(datatype Int32))
+(optional yes)))
+(deviceList
+(device 4 IODEVICE
+(properties
+(name "Channels parametrs")
+(transactions 6 "WRITE TEXT \"SING\" EOL" "WRITE TEXT \"CHAN1\" EOL"
+"WRITE TEXT \"AUTO\" EOL" "WRITE TEXT \"CHAN2\" EOL" "WRITE TEXT \"AUTO\" EOL"
+"WRITE TEXT \"CONT\" EOL"))
+(implementation
+(iopath "analyzer")))
+(device 5 PNPTRANS
+(properties
+(name "Initial state of  the Analyser before calibration")
+(transactions 12
+"hp875x_freqStimulus(instrHandle, hp875x_STIM_STRT_STOP, Start_frequency, Stop_frequency, Number_of_points)"
+"hp875x_channelSelect(instrHandle, hp875x_CH1)"
+"hp875x_measType(instrHandle, hp875x_S_PAR11, hp875x_CONV_OFF)"
+"hp875x_displaySelect(instrHandle, hp875x_CH1, hp875x_DISP_DATA, hp875x_DISP_LINM)"
+"hp875x_channelSelect(instrHandle, hp875x_CH2)"
+"hp875x_measType(instrHandle, hp875x_S_PAR22, hp875x_CONV_OFF)"
+"hp875x_displaySelect(instrHandle, hp875x_CH2, hp875x_DISP_DATA, hp875x_DISP_LINM)"
+"hp875x_dualSplit(instrHandle, hp875x_DUAL_CHAN_ON, hp875x_SPLIT_CHAN_ON)"
+"hp875x_timeOut(instrHandle, 120000)"
+"hp875x_average(instrHandle, hp875x_CH1, 0, 1, ifBw)"
+"hp875x_average(instrHandle, hp875x_CH2, 0, 1, ifBw)"
+"hp875x_averageSmoothSet(instrHandle, hp875x_AVERAGE_OFF, hp875x_SMOOTH_OFF)")
+(parmInfo 53 "5" "T 5000" "T 0" "T 0" "T 0" "T 0" "2" "T 5000" "T 0" "3"
+"T 5000" "T 0" "T 0" "4" "T 5000" "T 0" "T 0" "T 0" "2" "T 5000" "T 0" "3"
+"T 5000" "T 0" "T 0" "4" "T 5000" "T 0" "T 0" "T 0" "3" "T 5000" "T 0" "T 0" "2"
+"T 5000" "T 0" "5" "T 5000" "F" "F" "F" "T 0" "5" "T 5000" "F" "F" "F" "T 0" "3"
+"T 5000" "F" "F"))
+(interface
+(input 1
+(name "Start_frequency")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(input 2
+(name "Stop_frequency")
+(requires
+(datatype Real64))
+(lock name constraints)
+(optional yes))
+(input 3
+(name "Number_of_points")
+(requires
+(datatype Int16))
+(lock name constraints)
+(optional yes))
+(input 4
+(name "ifBw")
+(requires
+(datatype Int16))
+(lock name constraints)
+(optional yes))
+(output 1
+(name "cur_points")
+(optional yes)))
+(implementation
+(prefix "HP875X")
+(ioDev "analyzer")))
+(device 6 IODEVICE
+(properties
+(name "Sweep time ")
+(transactions 1 "WRITE TEXT \"SWEA\" EOL"))
+(implementation
+(iopath "analyzer")))
+(device 27 IODEVICE
+(properties
+(name "Linear Frequency Sweep")
+(transactions 1 "WRITE TEXT \"LINFREQ\" EOL"))
+(implementation
+(iopath "analyzer")))
+(device 28 EXITPROCESS
+(properties
+(code 0)))
+(device 29 BEEP
+(properties
+(frequency 1000)
+(duration 3)
+(volume 100))
+(implementation))
+(device 38 IODEVICE
+(properties
+(name "analyzer (he8753e @ 707)")
+(transactions 5 "WRITE TEXT \"CALK35MD\" EOL" "WRITE TEXT \"CALN\" EOL"
+"WRITE TEXT A EOL" "WRITE TEXT \"CALIFUL2\" EOL" "EXECUTE LOCAL"))
+(interface
+(input 1
+(name "A")
+(optional yes)))
+(implementation
+(iopath "analyzer")))
+(device 41 TOSTRING
+(properties
+(transactions 2 "WRITE TEXT \"POWE\"" "WRITE TEXT Power REAL64 FIX:0 EOL"))
+(interface
+(input 1
+(name "Power")
+(requires
+(datatype Real64))
+(optional yes))
+(output 1
+(name "result")
+(lock name constraints)))
+(implementation
+(attr iopath string write "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(configuration
+(connect D2:0 D0:0)
+(connect D3:0 D1:0)
+(connect I1:1 D1:1)
+(connect I2:1 D1:2)
+(connect I3:1 D1:3)
+(connect I5:1 D1:4)
+(connect D1:0 D2:0)
+(connect D5:0 D4:0)
+(connect D6:0 D5:0)
+(connect D0:0 D6:0)
+(connect D7:1 D6:1)
+(connect I4:1 D7:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 5 78)
+(configuration
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 125 15))
+(open
+(extent 365 237))
+(terminals on)
+(titleBg "Red")
+(pinCenter 530 370))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 267 65))
+(open
+(extent 515 177))
+(terminals on)
+(titleBg "Red")
+(pinCenter 540 250))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 229 74))
+(terminals on)
+(titleBg "Red")
+(pinCenter 530 320))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 149 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(titleBg "Red")
+(pinCenter 530 150))
+(devCarrierFor 28
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 530 610))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "beep.icn"))
+(open
+(extent 158 79))
+(pinCenter 530 520))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 158 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 530 440))
+(devCarrierFor 41
+(active icon)
+(icon
+(extent 53 15))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 370 440))
+(connect D2:0 D0:0
+(points 2 530 330 530 360))
+(connect D3:0 D1:0
+(points 4 530 178 530 200 540 200 540 215))
+(connect I1:1 D1:1
+(points 4 -5 -49 20 -49 20 230 404 230))
+(connect I2:1 D1:2
+(points 4 -5 11 10 11 10 240 404 240))
+(connect I3:1 D1:3
+(points 4 -5 71 20 71 20 250 404 250))
+(connect I5:1 D1:4
+(points 4 -5 191 10 191 10 260 404 260))
+(connect D1:0 D2:0
+(points 4 540 285 540 300 530 300 530 310))
+(connect D5:0 D4:0
+(points 2 530 548 530 582))
+(connect D6:0 D5:0
+(points 2 530 468 530 492))
+(connect D0:0 D6:0
+(points 2 530 380 530 412))
+(connect D7:1 D6:1
+(points 2 399 440 448 440))
+(connect I4:1 D7:1
+(points 4 -5 131 20 131 20 440 341 440)))
+(stackingOrder 2 3 5 4 7 0 6 1))))
+(device 316 INPUTDLG
+(properties
+(name "Start frequency")
+(popupTitle "Real64 Input")
+(prompt
+"Enter a start frequency between 10 kHz and 6 GHz. Use \"K\" for kHz, \"M\" for MHz, or \"G\" for GHz. For example, 50K = 50 kHz."
+)
+(initialValue "30K")
+(valueConstraint "10K<=value AND value<6G")
+(vErrorMessage "You must enter a frequency between 10K and 6G."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "real")
+(titleBarTextFont "Arial" 18)
+(promptTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 317 MESSAGEBOX
+(properties
+(message
+"This program prepares the Analyser for the full 2-port calibration. It will automatically select HP 85033D 3.5 mm calibration kit and the full 2-port calibration procedure. If you need other options, please use the calibration menu (button \"CAL\") on the Analyser\'s front panel. D.Makhnovskiy@June2015"
+)
+(symbol Information))
+(interface
+(output 1
+(name "OK")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK  Cancel")
+(buttonLabel1 "OK")
+(buttonLabel2 "Cancel")
+(buttonLabel3 "")
+(bdefault "OK")
+(titleBarTextFont "Arial" 18)
+(messageTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 318 INPUTDLG
+(properties
+(name "Stop frequency")
+(popupTitle "Real64 Input")
+(prompt
+"Enter a stop frequency between the start  frequency and 6 GHz. Use \"K\" for kHz, \"M\" for MHz, or \"G\" for GHz."
+)
+(initialValue "6G")
+(valueConstraint "10K<value AND value<=6G")
+(vErrorMessage "You must enter a frequency between the start frequency and 6G.")
+)
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "real")
+(titleBarTextFont "Arial" 18)
+(promptTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 350 INPUTDLG
+(properties
+(name "Number of points")
+(popupTitle "Int32 Input")
+(prompt
+"Enter the number of frequency points. It is recommended to use 1601 points. Alternatively, you can enter: 11, 51, 101, 201, 401, 601, 801, or 1601 points."
+)
+(initialValue "1601")
+(valueConstraint "11<=value AND value<=1601")
+(vErrorMessage "You must enter an integer number from the above list."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "integer")
+(titleBarTextFont "Arial" 18)
+(promptTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 351 INPUTDLG
+(properties
+(name "Power")
+(popupTitle "Real64 Input")
+(prompt "Enter a power between -85 dB and +10 dB.")
+(initialValue "0")
+(valueConstraint "-85<=value AND value<=10")
+(vErrorMessage "You must enter a power between -85 dB and +10 dB."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "real")
+(titleBarTextFont "Arial" 18)
+(promptTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 365 IFTHENELSE
+(properties
+(name "IF Start<Stop")
+(cases 1 "Start<Stop"))
+(interface
+(input 1
+(name "Start")
+(optional yes))
+(input 2
+(name "Stop")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 368 GATE
+(interface
+(input 1
+(name "A")
+(tag "InData"))
+(output 1
+(name "X"))))
+(device 386 DO
+(interface
+(output 1
+(name "Do"))))
+(device 402 EXITPROCESS
+(properties
+(code 0)))
+(device 403 EXITPROCESS
+(properties
+(code 0)))
+(device 404 EXITPROCESS
+(properties
+(code 0)))
+(device 405 EXITPROCESS
+(properties
+(code 0)))
+(device 406 EXITPROCESS
+(properties
+(code 0)))
+(device 436 REPEATUNTILBREAK
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 437 MESSAGEBOX
+(properties
+(message
+"The stop frequency must be larger than the start frequency! Please re-enter again."
+)
+(symbol Stop))
+(interface
+(output 1
+(name "OK")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "OK  Cancel")
+(buttonLabel1 "OK")
+(buttonLabel2 "Cancel")
+(buttonLabel3 "")
+(bdefault "OK")
+(titleBarTextFont "Arial" 18)
+(messageTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 438 EXITPROCESS
+(properties
+(code 0)))
+(device 441 NEXT)
+(device 442 INPUTDLG
+(properties
+(name "IFBW")
+(popupTitle "Int32 Input")
+(prompt "IFBW (Hz): 10, 30, 100, 300, 1000, 3000, 3700, 6000")
+(initialValue "3700")
+(valueConstraint "10<=value AND value<=6000")
+(vErrorMessage "You must choose from integer values shown above."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "real")
+(titleBarTextFont "Arial" 18)
+(promptTextFont "Arial" 16)
+(buttonTextFont "Arial" 16)))
+(device 443 EXITPROCESS
+(properties
+(code 0)))
+(configuration
+(connect D18:0 D0:0)
+(connect D1:1 D0:1)
+(connect D7:1 D0:2)
+(connect D4:1 D0:3)
+(connect D5:1 D0:4)
+(connect D18:1 D0:5)
+(connect D14:1 D1:0)
+(connect D1:0 D3:0)
+(connect D8:1 D4:0)
+(connect D4:0 D5:0)
+(connect D1:1 D6:1)
+(connect D3:1 D6:2)
+(connect D6:1 D7:0)
+(connect D3:1 D7:1)
+(connect D6:1 D8:0)
+(connect D2:2 D9:0)
+(connect D1:2 D10:0)
+(connect D3:2 D11:0)
+(connect D4:2 D12:0)
+(connect D5:2 D13:0)
+(connect D2:0 D14:0)
+(connect D6:2 D15:0)
+(connect D15:2 D16:0)
+(connect D15:1 D17:0)
+(connect D5:0 D18:0)
+(connect D18:2 D19:0))
+(ShowOnExecPanel))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 1276 853)
+(wndState max)
+(active detail)
+(panel
+(extent 1268 845)
+(pictureMode scaled)
+(pictureImage "VNA measurements.jpg")
+(panelBg "Light Yellow"))
+(detail
+(extent 1276 853)
+(anchorPt 29 350)
+(configuration
+(devCarrierFor 302
+(active icon)
+(icon
+(extent 335 95))
+(terminals on)
+(titleBg "Red")
+(titleFg "White")
+(titleFont "Arial" 20)
+(pinCenter 540 440))
+(devCarrierFor 316
+(active icon)
+(icon
+(extent 85 25))
+(open
+(extent 433 103))
+(terminals on)
+(pinCenter 490 -120))
+(devCarrierFor 317
+(active icon)
+(icon
+(extent 81 25))
+(open
+(extent 219 126))
+(terminals on)
+(pinCenter 490 -280))
+(devCarrierFor 318
+(active icon)
+(icon
+(extent 85 25))
+(open
+(extent 433 103))
+(terminals on)
+(pinCenter 490 -20))
+(devCarrierFor 350
+(active icon)
+(icon
+(extent 104 25))
+(open
+(extent 381 103))
+(terminals on)
+(pinCenter 520 220))
+(devCarrierFor 351
+(active icon)
+(icon
+(extent 39 25))
+(open
+(extent 433 103))
+(terminals on)
+(pinCenter 520 330))
+(devCarrierFor 365
+(active icon)
+(icon
+(extent 77 25))
+(open
+(extent 119 51))
+(terminals on)
+(pinCenter 650 -80))
+(devCarrierFor 368
+(active icon)
+(icon
+(extent 30 15))
+(open
+(extent 136 30))
+(terminals on)
+(pinCenter 170 330))
+(devCarrierFor 386
+(active icon)
+(icon
+(extent 24 15))
+(open
+(extent 12 30))
+(terminals on)
+(pinCenter 420 170))
+(devCarrierFor 402
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 960 -230))
+(devCarrierFor 403
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 970 -140))
+(devCarrierFor 404
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 970 30))
+(devCarrierFor 405
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 970 230))
+(devCarrierFor 406
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 970 370))
+(devCarrierFor 436
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open
+(extent 12 30))
+(terminals on)
+(pinCenter 490 -210))
+(devCarrierFor 437
+(active icon)
+(icon
+(extent 81 25))
+(open
+(extent 219 126))
+(terminals on)
+(pinCenter 800 -100))
+(devCarrierFor 438
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 970 -50))
+(devCarrierFor 441
+(active icon)
+(icon
+(extent 28 15))
+(open)
+(terminals on)
+(pinCenter 900 -110))
+(devCarrierFor 442
+(active icon)
+(icon
+(extent 33 25))
+(open
+(extent 433 103))
+(terminals on)
+(pinCenter 170 410))
+(devCarrierFor 443
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 260 440))
+(connect D18:0 D0:0
+(points 6 170 425 170 450 130 450 130 360 540 360 540 390))
+(connect D1:1 D0:1
+(points 8 535 -130 570 -130 570 -90 560 -90 560 -80 360 -80 360 400 370 400))
+(connect D7:1 D0:2
+(points 4 187 330 330 330 330 420 370 420))
+(connect D4:1 D0:3
+(points 8 574 210 580 210 580 190 450 190 450 200 340 200 340 440 370 440))
+(connect D5:1 D0:4
+(points 6 542 320 550 320 550 300 350 300 350 460 370 460))
+(connect D18:1 D0:5
+(points 6 189 400 200 400 200 380 320 380 320 480 370 480))
+(connect D14:1 D1:0
+(points 5 526 -210 550 -210 550 -160 490 -160 490 -135))
+(connect D1:0 D3:0
+(points 2 490 -105 490 -35))
+(connect D8:1 D4:0
+(points 3 434 170 520 170 520 205))
+(connect D4:0 D5:0
+(points 2 520 235 520 315))
+(connect D1:1 D6:1
+(points 4 535 -130 570 -130 570 -90 609 -90))
+(connect D3:1 D6:2
+(points 4 535 -30 580 -30 580 -70 609 -70))
+(connect D6:1 D7:0
+(points 7 691 -90 720 -90 720 30 420 30 420 140 170 140 170 320))
+(connect D3:1 D7:1
+(points 6 535 -30 560 -30 560 20 130 20 130 330 152 330))
+(connect D6:1 D8:0
+(points 5 691 -90 720 -90 720 30 420 30 420 160))
+(connect D2:2 D9:0
+(points 5 533 -270 550 -270 550 -280 960 -280 960 -258))
+(connect D1:2 D10:0
+(points 5 535 -110 560 -110 560 -180 970 -180 970 -168))
+(connect D3:2 D11:0
+(points 3 535 -10 970 -10 970 2))
+(connect D4:2 D12:0
+(points 5 574 230 590 230 590 180 970 180 970 202))
+(connect D5:2 D13:0
+(points 5 542 340 560 340 560 320 970 320 970 342))
+(connect D2:0 D14:0
+(points 2 490 -265 490 -238))
+(connect D6:2 D15:0
+(points 5 691 -70 710 -70 710 -130 800 -130 800 -115))
+(connect D15:2 D16:0
+(points 7 843 -90 860 -90 860 -80 910 -80 910 -90 970 -90 970 -78))
+(connect D15:1 D17:0
+(points 5 843 -110 860 -110 860 -140 900 -140 900 -120))
+(connect D5:0 D18:0
+(points 4 520 345 520 370 170 370 170 395))
+(connect D18:2 D19:0
+(points 5 189 420 210 420 210 390 260 390 260 412)))
+(stackingOrder 13 12 9 10 16 11 14 8 17 3 1 6 15 2 4 5 7 18 19 0))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
